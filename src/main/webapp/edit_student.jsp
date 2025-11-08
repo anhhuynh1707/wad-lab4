@@ -125,14 +125,6 @@
     }
 %>
 	<script>
-	setTimeout(function() {
-	    var messages = document.querySelectorAll('.message');
-	    messages.forEach(function(msg) {
-	        msg.style.transition = "opacity 0.5s ease";
-	        msg.style.opacity = '0';
-	        setTimeout(() => msg.style.display = 'none', 500);
-	    });
-	}, 3000); // Auto-hide after 3 seconds
 	function submitForm(form) {
 	    var btn = form.querySelector('button[type="submit"]');
 	    if (btn) {

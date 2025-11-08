@@ -6,11 +6,25 @@
     String email = request.getParameter("email");
     String major = request.getParameter("major");
     
-    if (studentCode == null || studentCode.trim().isEmpty() ||
-        fullName == null || fullName.trim().isEmpty()) {
-        response.sendRedirect("add_student.jsp?error=Required fields are missing");
-        return;
-    }
+    //Check required fiels
+	if (studentCode == null || studentCode.trim().isEmpty() || fullName == null || fullName.trim().isEmpty()) {
+	    response.sendRedirect("add_student.jsp?error=Required fields are missing");
+	    return;
+	}
+	
+	// Check email validation (only if email is not empty)
+	if (email != null && !email.trim().isEmpty()) {
+	    if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$")) {
+	        response.sendRedirect("add_student.jsp?error=Invalid email format");
+	        return;
+	    }
+	}
+	
+	// Check student code format
+	if (!studentCode.matches("^[A-Z]{2}[0-9]{3,}$")) {
+	    response.sendRedirect("add_student.jsp?error=Invalid student code format (e.g. SV001, IT123)");
+	    return;
+	}
     
     Connection conn = null;
     PreparedStatement pstmt = null;

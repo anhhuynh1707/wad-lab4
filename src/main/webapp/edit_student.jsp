@@ -7,26 +7,56 @@
     <title>Edit Student</title>
     <style>
         /* Same CSS as add_student.jsp */
-        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
-        .container {
-            max-width: 600px; margin: 50px auto; background: white;
-            padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        body {
+	        font-family: Arial, sans-serif;
+	        margin: 20px;
+	        background: #f5f5f5;
         }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+        	margin-bottom: 20px;
+        }
+        label {
+        	display: block;
+        	margin-bottom: 5px;
+        	font-weight: bold;
+        }
         input[type="text"], input[type="email"] {
-            width: 100%; padding: 10px; border: 1px solid #ddd;
-            border-radius: 5px; box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
         }
         .btn-submit {
-            background: #ffc107; color: #333; padding: 12px 30px;
-            border: none; border-radius: 5px; cursor: pointer;
+            background: #ffc107;
+            color: #333;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
         .btn-cancel {
-            background: #6c757d; color: white; padding: 12px 30px;
-            text-decoration: none; display: inline-block; border-radius: 5px;
+            background: #6c757d;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none; 
+            display: inline-block;
+            border-radius: 5px;
         }
-        .error { background: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px; margin-bottom: 20px; }
+        .error {
+        	background: #f8d7da;
+        	color: #721c24;
+        	padding: 10px;
+        	border-radius: 5px;
+        	margin-bottom: 20px; }
     </style>
 </head>
 <body>
@@ -94,6 +124,24 @@
         }
     }
 %>
+	<script>
+	setTimeout(function() {
+	    var messages = document.querySelectorAll('.message');
+	    messages.forEach(function(msg) {
+	        msg.style.transition = "opacity 0.5s ease";
+	        msg.style.opacity = '0';
+	        setTimeout(() => msg.style.display = 'none', 500);
+	    });
+	}, 3000); // Auto-hide after 3 seconds
+	function submitForm(form) {
+	    var btn = form.querySelector('button[type="submit"]');
+	    if (btn) {
+	        btn.disabled = true;
+	        btn.textContent = 'Processing...';
+	    }
+	    return true;
+	}
+	</script>
     <div class="container">
         <h2>✏️ Edit Student Information</h2>
         

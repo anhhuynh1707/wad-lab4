@@ -40,6 +40,8 @@ Class: Web Application Development G01_lab3 (Tue-1234)
 
 - Updating the given regular expression (regex) to make it check some complicated email formats.
 
+- Change the input type of email to make it only check the validation at the backend side, not check at the frontend side via HTML code.
+
 TIME SPENT: 6 hours
 
 **REFERENCES USED:**

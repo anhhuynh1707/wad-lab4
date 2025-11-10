@@ -11,17 +11,17 @@ Class: Web Application Development G01_lab3 (Tue-1234)
 
 **COMPLETED EXERCISES:**
 
-[✅] Exercise 5: 🔎 Search Functionality
+✅ Exercise 5: 🔎 Search Functionality
 
-[✅] Exercise 6: 👍 Validation Enhancement
+✅ Exercise 6: 👍 Validation Enhancement
 
-[✅] Exercise 7: ✏Pagination
+✅ Exercise 7: ✏Pagination
 
-[✅] Bonus 1: ⬇️ CSV Export
+✅ Bonus 1: ⬇️ CSV Export
 
-[✅] Bonus 2: ▲ Sortable Columns ▼
+✅ Bonus 2: ▲ Sortable Columns ▼
 
-[✅] Bonus 3: 🗑️ Bulk Delete
+✅ Bonus 3: 🗑️ Bulk Delete
 
 **KNOWN ISSUES:**
 

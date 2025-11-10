@@ -11,21 +11,23 @@ Class: Web Application Development G01_lab3 (Tue-1234)
 
 **COMPLETED EXERCISES:**
 
-[x] Exercise 5: Search Functionality
+[✅] Exercise 5: 🔎 Search Functionality
 
-[x] Exercise 6: Validation Enhancement
+[✅] Exercise 6: 👍 Validation Enhancement
 
-[x] Exercise 7: Pagination
+[✅] Exercise 7: ✏Pagination
 
-[x] Bonus 1: CSV Export
+[✅] Bonus 1: ⬇️ CSV Export
 
-[x] Bonus 2: Sortable Columns
+[✅] Bonus 2: ▲ Sortable Columns ▼
 
-[x] Bonus 3: Bulk Delete
+[✅] Bonus 3: 🗑️ Bulk Delete
 
 **KNOWN ISSUES:**
 
 - Struggle with email validation since the unknown in the regular expressions and redirect it back to add the Student page or edit the Student page.
+
+- Struggle with how the error message displays on the homepage.
 
 - Forget how PreparedStatement works.
 
@@ -34,9 +36,11 @@ Class: Web Application Development G01_lab3 (Tue-1234)
 
 **EXTRA FEATURES:**
 
-- Adding CSS to make the button, search field, and sorting via title more beautiful.
+- Adding CSS to make the button, search field, and sorting via titles more beautiful.
 
-TIME SPENT: 6 hours (not including writing the report)
+- Updating the given regular expression (regex) to make it check some complicated email formats.
+
+TIME SPENT: 6 hours
 
 **REFERENCES USED:**
 

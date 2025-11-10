@@ -267,7 +267,7 @@
             "123456"
         );
         String sql;
-        //Count total recors
+        //Count total records
         if (keyword != null && !keyword.trim().isEmpty()) {
             sql = "SELECT COUNT(*) FROM students WHERE full_name LIKE ? OR student_code LIKE ? OR major LIKE ?";
             countStmt = conn.prepareStatement(sql);
@@ -284,7 +284,7 @@
         
         //Get students
         if (keyword != null && !keyword.trim().isEmpty()) {
-            sql = "SELECT * FROM students WHERE full_name LIKE ? OR student_code LIKE ? OR major LIKE ? " +
+            sql = "SELECT * FROM students WHERE full_name LIKE ? OR student_code LIKE ? OR major LIKE ? " +	
                   "ORDER BY " + sortBy + " " + order + " LIMIT ? OFFSET ?";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, "%" + keyword + "%");
@@ -329,14 +329,14 @@
         }
         if (!hasResult) {
         	%>
-        	    <tr><td colspan="7" style="text-align:center;">No students found.</td></tr>
+        	    <tr><td colspan="8" style="text-align:center;">No students found.</td></tr>
         	<%
         }
     } catch (ClassNotFoundException e) {
-        out.println("<tr><td colspan='7'>Error: JDBC Driver not found!</td></tr>");
+        out.println("<tr><td colspan='8'>Error: JDBC Driver not found!</td></tr>");
         e.printStackTrace();
     } catch (SQLException e) {
-        out.println("<tr><td colspan='7'>Database Error: " + e.getMessage() + "</td></tr>");
+        out.println("<tr><td colspan='8'>Database Error: " + e.getMessage() + "</td></tr>");
         e.printStackTrace();
     } finally {
         try {

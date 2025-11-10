@@ -141,7 +141,7 @@
             <div class="error"><%= request.getParameter("error") %></div>
         <% } %>
         
-        <form action="process_edit.jsp" method="POST">
+        <form action="process_edit.jsp" method="POST" onsubmit="return submitForm(this)">
             <input type="hidden" name="id" value="<%= studentId %>">
             
             <div class="form-group">
@@ -157,7 +157,7 @@
             
             <div class="form-group">
                 <label>Email</label>
-                <input type="email" name="email" value="<%= email %>">
+                <input type="text" name="email" value="<%= email %>">
             </div>
             
             <div class="form-group">

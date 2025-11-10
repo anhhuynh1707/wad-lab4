@@ -10,6 +10,7 @@
         response.sendRedirect("list_students.jsp?error=Invalid data");
         return;
     }
+    
     //Check email validation
     if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$")) {
 	    response.sendRedirect("edit_student.jsp?id=" + idParam + "&error=Invalid email format");
